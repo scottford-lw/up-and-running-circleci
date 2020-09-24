@@ -12,10 +12,10 @@ jobs:
       - checkout
       - run: 
           name: Validate Packer Config
-          command: packer validate ubuntu-1804-base.json
+          command: packer validate ubuntu1804-base.json
       - run: 
           name: Build AMI and Validate with Lacework Vulnerability Scanning
-          command: packer build ubuntu-1804-base.json
+          command: packer build ubuntu1804-base.json
 
   build-and-push:
     executor: docker/docker
